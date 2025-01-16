@@ -9,7 +9,7 @@ COPY gradle /app/gradle/
 RUN gradle --no-daemon dependencies
 
 # 소스 코드 복사 및 빌드
-COPY src /app
+COPY src /app/src/
 RUN gradle build --no-daemon -x test
 
 # 실행 단계
